@@ -47,6 +47,9 @@ bool SessionAgregator::diffMoreTtl(tm creationTime) {
 }
 
 Session SessionAgregator::getSessionById(std::string id) {
+    if (currentConnections[id] == null){
+        return 0;
+    }
     return currentConnections[id];
 }
 
